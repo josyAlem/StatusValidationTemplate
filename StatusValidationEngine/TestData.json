@@ -1,0 +1,63 @@
+﻿{
+	"Workflow": [
+		//Valid workflow
+		[ "Pending", "Sent", true ],
+		[ "Pending", "Viewed", true ],
+		[ "Pending", "Expired", true ],
+		[ "Pending", "DeliveryError", true ],
+		[ "Pending", "Locked", true ],
+
+		[ "Sent", "Viewed", true ],
+		[ "Sent", "Expired", true ],
+		[ "Sent", "Locked", true ],
+
+		[ "Viewed", "Viewed", true ],
+		[ "Viewed", "FundingSelected", true ],
+		[ "Viewed", "Expired", true ],
+		[ "Viewed", "Locked", true ],
+
+		[ "FundingSelected", "Signed", true ],
+		[ "FundingSelected", "Expired", true ],
+		[ "FundingSelected", "Locked", true ],
+
+		[ "Signed", "Funded", true ],
+
+		[ "Funded", "Approved", true ],
+		[ "Funded", "Active", true ],
+
+		[ "Approved", "Active", true ],
+
+		[ "DeliveryError", "Viewed", true ],
+		[ "DeliveryError", "Locked", true ],
+
+		[ "Locked", "Pending", true ],
+		[ "Locked", "Sent", true ],
+		[ "Locked", "Viewed", true ],
+		[ "Locked", "Expired", true ],
+
+		//Invalid workflow
+		[ "Active", "Approved", false ],
+		[ "Active", "DeliveryError", false ],
+		[ "Active", "Expired", false ],
+		[ "Active", "Funded", false ],
+		[ "Active", "FundingSelected", false ],
+		[ "Active", "Locked", false ],
+		[ "Active", "Sent", false ],
+		[ "Active", "Signed", false ],
+		[ "Active", "Viewed", false ],
+
+		[ "Expired", "Approved", false ],
+		[ "Expired", "DeliveryError", false ],
+		[ "Expired", "Expired", false ],
+		[ "Expired", "Funded", false ],
+		[ "Expired", "FundingSelected", false ],
+		[ "Expired", "Locked", false ],
+		[ "Expired", "Sent", false ],
+		[ "Expired", "Signed", false ],
+		[ "Expired", "Viewed", false ]
+
+
+
+	]
+}
+
