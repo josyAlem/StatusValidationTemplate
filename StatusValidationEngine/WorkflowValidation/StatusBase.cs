@@ -32,7 +32,7 @@ namespace StatusValidationEngine
         /// Validates that we can transition an eLoan INTO this status.
         /// </summary>
         /// <returns></returns>
-        protected virtual WorkflowValidationResult PreValidate(OfferDetailDto offer)
+        protected virtual WorkflowValidationResult PreValidate(OfferDto offer)
         {
             // Don't allow a transition into this Status if the Offer is expired (unless explicitly allowed)
             if (offer.IsExpired && !AllowExpiredTransition)
@@ -58,7 +58,7 @@ namespace StatusValidationEngine
         /// <param name="newStatus"></param>
         /// <param name="offer"></param>
         /// <returns></returns>
-        public virtual WorkflowValidationResult Validate(OfferStatus newStatus, OfferDetailDto offer)
+        public virtual WorkflowValidationResult Validate(OfferStatus newStatus, OfferDto offer)
         {
             // Validate that we can move into this new status based on the current Offer details
             StatusBase preValidationStatus;

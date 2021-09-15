@@ -11,7 +11,7 @@
             };
         }
 
-        protected override WorkflowValidationResult PreValidate(OfferDetailDto offer)
+        protected override WorkflowValidationResult PreValidate(OfferDto offer)
         {
             var baseValidationResult = base.PreValidate(offer);
             if (!baseValidationResult.IsValid)
@@ -24,7 +24,7 @@
             return baseValidationResult;
         }
 
-        public override WorkflowValidationResult Validate(OfferStatus newStatus, OfferDetailDto offer)
+        public override WorkflowValidationResult Validate(OfferStatus newStatus, OfferDto offer)
         {
             var baseValidationResult = base.Validate(newStatus, offer);
             if (!baseValidationResult.IsValid)

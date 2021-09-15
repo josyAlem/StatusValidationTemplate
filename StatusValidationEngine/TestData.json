@@ -1,6 +1,5 @@
 ﻿{
-	"Workflow": [
-		//Valid workflow
+	"ValidWorkflow": [
 		[ "Pending", "Sent", true ],
 		[ "Pending", "Viewed", true ],
 		[ "Pending", "Expired", true ],
@@ -33,9 +32,10 @@
 		[ "Locked", "Pending", true ],
 		[ "Locked", "Sent", true ],
 		[ "Locked", "Viewed", true ],
-		[ "Locked", "Expired", true ],
+		[ "Locked", "Expired", true ]
+	],
+	"InvalidWorkflow": [
 
-		//Invalid workflow
 		[ "Active", "Approved", false ],
 		[ "Active", "DeliveryError", false ],
 		[ "Active", "Expired", false ],
@@ -55,9 +55,6 @@
 		[ "Expired", "Sent", false ],
 		[ "Expired", "Signed", false ],
 		[ "Expired", "Viewed", false ]
-
-
-
 	]
 }
 

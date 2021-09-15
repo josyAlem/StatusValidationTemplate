@@ -2,7 +2,7 @@
 
 namespace StatusValidationEngine
 {
-    public class OfferDetailDto 
+    public class OfferDto 
     {
 
         public OfferStatus OfferStatusId { get; set; }

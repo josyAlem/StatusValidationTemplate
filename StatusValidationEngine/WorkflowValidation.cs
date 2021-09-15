@@ -4,12 +4,8 @@ using System.Threading.Tasks;
 
 namespace StatusValidationEngine
 {
-    public class WorkflowValidationService 
+    public class WorkflowValidation
     {
-
-        public WorkflowValidationService()
-        {
-        }
 
         /// <summary>
         /// Validates a Status transition for a given OfferId/Code and new Status
@@ -19,7 +15,7 @@ namespace StatusValidationEngine
         /// <param name="offerCode"></param>
         /// <returns>True if valid transition, False if invalid transition, NULL if Offer not found</returns>
         public  WorkflowValidationResult ValidateOfferStatusChange(OfferStatus newOfferStatus,
-            OfferDetailDto offer)
+            OfferDto offer)
         {
 
 

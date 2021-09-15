@@ -16,7 +16,7 @@
 
         protected override bool AllowExpiredTransition => true;
 
-        protected override WorkflowValidationResult PreValidate(OfferDetailDto offer)
+        protected override WorkflowValidationResult PreValidate(OfferDto offer)
         {
             var baseResponse = base.PreValidate(offer);
             if (!baseResponse.IsValid)
@@ -29,7 +29,7 @@
             return baseResponse;
         }
 
-        public override WorkflowValidationResult Validate(OfferStatus newStatus, OfferDetailDto offer)
+        public override WorkflowValidationResult Validate(OfferStatus newStatus, OfferDto offer)
         {
             var baseValidationResult = base.Validate(newStatus, offer);
             if (!baseValidationResult.IsValid)
